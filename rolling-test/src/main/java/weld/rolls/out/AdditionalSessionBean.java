@@ -17,43 +17,24 @@
 package weld.rolls.out;
 
 import java.io.Serializable;
-import java.util.Random;
 
 import javax.enterprise.context.SessionScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
  *
  * @author <a href="mailto:manovotn@redhat.com">Matej Novotny</a>
  */
-@Named(value="bean")
+@Named(value="additionalBean")
 @SessionScoped
-public class SessionBean implements Serializable {
-    private static final long serialVersionUID = 1L;
+@Additional
+public class AdditionalSessionBean implements Serializable {
     
-    @Inject @Additional
-    AdditionalSessionBean additional;
+    private static final long serialVersionUID = 50L;
     
-    private Integer random = -1;
-    private String hello = "Definitely not hello world";
-        
-        public String getHello(){
-            if (additional != null) {
-                return additional.getImportantMessage();
-            } else {
-                return hello;
-            }
-        }
-        
-        public void setHello(String newHello) {
-            this.hello = newHello;
-        }
-        
-        public Integer getRandom() {
-            if (random == -1) {
-                random = new Random().nextInt(100);
-            }
-            return random;
-        }
+    private String importantMessage = "Hush!";
+    
+    public String getImportantMessage () {
+        return importantMessage;
+    }
 }

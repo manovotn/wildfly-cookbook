@@ -9,7 +9,7 @@
 
         <h2>WildFly::Cookbook::Rolling Test</h2>
 
-        <h3 style="color:#ccff00;">I'm running version 1.1</h3>
+        <h3 style="color:#ccff00;">I'm running version 1.2</h3>
 
         <h4>Who is serving your request? <%=System.getProperty("jboss.node.name")%></h4>
         <p>Message from session bean: ${bean.hello} </p>
@@ -20,7 +20,7 @@
             Object sessAttr = session.getAttribute("visitors");
             int visitors = sessAttr == null ? 0 : Integer.valueOf(sessAttr+"");
             System.out.println("********************************+");
-            System.out.println("I'm running version 1.1");
+            System.out.println("I'm running version 1.2");
             System.out.println("I'm serving your request and I'm " + System.getProperty("jboss.node.name"));
             System.out.println("Visitor(s): " + visitors);
             System.out.println("********************************+");
