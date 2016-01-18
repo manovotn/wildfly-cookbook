@@ -11,5 +11,15 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     <session-config>
         <session-timeout>1</session-timeout>
     </session-config>
+    
+<!--    <context-param>
+      <param-name>org.jboss.weld.development</param-name>
+      <param-value>true</param-value>
+   </context-param>-->
+   
+   <context-param>
+      <param-name>org.jboss.weld.serialization.beanIdentifierIndexOptimization</param-name>
+      <param-value>true</param-value>
+   </context-param>
 
 </web-app>
