@@ -8,8 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>rolling-test</artifactId>
     <packaging>war</packaging>
-    <version>1.1</version>
-    <name>rolling-test</name>
+    <version>1.2</version>
+    <name>rolling-test__1-2</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
